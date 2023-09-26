@@ -32,7 +32,7 @@ app.MapGet("/creditscore", () =>
 
 app.MapGet("/userAddedCreditScores", () => userAddedCreditScores);*/
 
-app.Run("http://*:5000");
+app.Run("http://localhost:5000");
 
 record CreditScore(int Score)
 {
