@@ -11,7 +11,8 @@ COPY . .
 WORKDIR "/src/."
 RUN dotnet build "HardwareId.csproj" -c Release -o /app/build
 
-FROM build AS publish
+FROM build AS publishls
+
 RUN dotnet publish "HardwareId.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
