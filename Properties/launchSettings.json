@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HardwareId": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
