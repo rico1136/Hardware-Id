@@ -193,7 +193,7 @@
         }
       }
     },
-    "net7.0/ubuntu.16.04-x64": {
+    "net7.0/linux-x64": {
       "Driver.NET.DeviceIoControl/2.3.1": {
         "type": "package",
         "compile": {
@@ -839,7 +839,7 @@
       }
     },
     "runtimes": {
-      "ubuntu.16.04-x64": {
+      "linux-x64": {
         "#import": []
       }
     }
