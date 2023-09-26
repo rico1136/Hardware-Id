@@ -2,6 +2,9 @@
 using System.Diagnostics;
 using System.Management;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
 
 class SystemIdentifier
 {
@@ -27,6 +30,20 @@ class SystemIdentifier
 		{
 			throw new PlatformNotSupportedException("Unsupported OS.");
 		}
+	}
+
+	public string ToJson()
+	{
+		// Create a SystemIdentifier instance with relevant properties
+		var systemInfo = new
+		{
+			CPUIdentifier,
+			DiskSerialNumber,
+			BIOSIdentifier
+		};
+
+		// Serialize to JSON
+		return JsonSerializer.Serialize(systemInfo);
 	}
 
 	private string GetWindowsCPUIdentifier()
@@ -74,7 +91,6 @@ class SystemIdentifier
 	private string GetLinuxCPUIdentifier()
 	{
 		// Linux-specific code to get CPU identifier
-		// Execute shell commands and return the CPU name
 		string commandOutput = ExecuteShellCommand("sudo lscpu");
 
 		// Split the command output into lines
@@ -98,7 +114,6 @@ class SystemIdentifier
 	private string GetLinuxDiskSerialNumber()
 	{
 		// Linux-specific code to get disk serial number
-		// Example: Execute shell commands, e.g., "udevadm info --query=all --name=/dev/sda | grep SERIAL"
 		string commandOutput = ExecuteShellCommand("sudo udevadm info --query=all --name=/dev/sda | grep ID_SERIAL");
 
 		return commandOutput;
@@ -107,7 +122,6 @@ class SystemIdentifier
 	private string GetLinuxBIOSIdentifier()
 	{
 		// Linux-specific code to get BIOS identifier
-		// Example: Execute shell commands, e.g., "dmidecode -s system-uuid"
 		string commandOutput = ExecuteShellCommand("sudo dmidecode -s system-uuid");
 		return commandOutput;
 	}
@@ -146,6 +160,30 @@ class Program
 			Console.WriteLine("CPU Identifier: " + systemIdentifier.CPUIdentifier);
 			Console.WriteLine("Disk Serial Number: " + systemIdentifier.DiskSerialNumber);
 			Console.WriteLine("BIOS Identifier: " + systemIdentifier.BIOSIdentifier);
+
+			string input = systemIdentifier.ToJson();
+
+			using (var hashAlgorithm = SHA256.Create())
+			{
+				// Convert the input string to a byte array and compute the hash.
+				byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+				// Create a new Stringbuilder to collect the bytes
+				// and create a string.
+				var sBuilder = new StringBuilder();
+
+				// Loop through each byte of the hashed data
+				// and format each one as a hexadecimal string.
+				for (int i = 0; i < data.Length; i++)
+				{
+					sBuilder.Append(data[i].ToString("x2"));
+				}
+
+				// Return the hexadecimal string.
+				var hash = sBuilder.ToString();
+
+				Console.WriteLine($"The SHA256 hash of {input} is: {hash}.");
+			}
 		}
 		catch (PlatformNotSupportedException ex)
 		{
