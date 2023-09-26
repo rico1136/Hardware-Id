@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "kMaaVPDqZapmEnvzwAE9CwkGMQrG7/81gXov6YiE/d+y04mg+mCya6aZywYg7QOmWhJ3ofmg2u7AlYO3xVyFvg==",
+  "dgSpecHash": "v0SA08B6lXQLI0n3wiDmQhoHA4fdXWzdhFLXl60BdfUjatnb3Jwi5es1JtqcQ7X4DxKthMoSpw8cBoiB0gPSwg==",
   "success": true,
   "projectFilePath": "D:\\01_Observator\\RESTFULL-API\\RESTFULL-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rzethof\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\rzethof\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+    "C:\\Users\\rzethof\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\7.0.11\\microsoft.netcore.app.runtime.linux-x64.7.0.11.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\7.0.11\\microsoft.aspnetcore.app.runtime.linux-x64.7.0.11.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\7.0.11\\microsoft.netcore.app.host.linux-x64.7.0.11.nupkg.sha512"
   ],
   "logs": []
 }
