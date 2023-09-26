@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nl3MbDSupImUDonQ6uviLhjwHP8DDViNjukQ/nmTImOL1tHD1Zs8XDM1v6dc1z76YkX4KHU254tsYdXCZ5tTCw==",
+  "dgSpecHash": "H/NKLVHq/44k1bKLpE5PUoftGAa/lIKy3/aImJwGSveTqwGNl8kVWhh2SiKOeD7x9y5Hpkk+b9mtxpIlUXiR3A==",
   "success": true,
   "projectFilePath": "D:\\01_Observator\\LicenseServer\\HardwareId\\HardwareId.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,10 @@
     "C:\\Users\\rzethof\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
     "C:\\Users\\rzethof\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\rzethof\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\rzethof\\.nuget\\packages\\windowsmonitor.standard\\4.2.0\\windowsmonitor.standard.4.2.0.nupkg.sha512"
+    "C:\\Users\\rzethof\\.nuget\\packages\\windowsmonitor.standard\\4.2.0\\windowsmonitor.standard.4.2.0.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\7.0.11\\microsoft.netcore.app.runtime.linux-x64.7.0.11.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\7.0.11\\microsoft.aspnetcore.app.runtime.linux-x64.7.0.11.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\7.0.11\\microsoft.netcore.app.host.linux-x64.7.0.11.nupkg.sha512"
   ],
   "logs": []
 }
