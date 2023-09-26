@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kMaaVPDqZapmEnvzwAE9CwkGMQrG7/81gXov6YiE/d+y04mg+mCya6aZywYg7QOmWhJ3ofmg2u7AlYO3xVyFvg==",
+  "success": true,
+  "projectFilePath": "D:\\01_Observator\\RESTFULL-API\\RESTFULL-API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rzethof\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\rzethof\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
